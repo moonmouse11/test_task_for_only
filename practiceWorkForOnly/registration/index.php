@@ -17,11 +17,9 @@ if (! empty($_POST) && ! empty($_POST['email'])) {
         }
     }    
 }
-
-
 includeTemplate("header.php", ['text' => "Регистрация", 'miniText' => "Email, имя и пароль"]);
-
 ?>
+
 <div class="row">
     <div class="box">
         <div class="col-lg-12">
