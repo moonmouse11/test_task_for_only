@@ -9,7 +9,7 @@ function connect()
 
 	static $connection;
 
-	if ($connection == null) {
+	if ($connection === null) {
 		$connection = mysqli_connect($localhost, $name, $password, $dbName);
 	}
 

@@ -7,7 +7,6 @@ includeTemplate("header.php", ['text' => "Главная страница", 'min
 ?>
 
 <div class="container">
-
     <div class="row">
         <div class="box">
             <div class="col-lg-12 text-center">
@@ -18,9 +17,9 @@ includeTemplate("header.php", ['text' => "Главная страница", 'min
                         </div>
                     </div>
                 </div>
-                <h2 class="brand-before">
-                    <small>А вы выпили с утра чашечку кофе?</small>
-                </h2>
+                    <h2 class="brand-before">
+                        <small>А вы выпили с утра чашечку кофе?</small>
+                    </h2>
                 <hr class="tagline-divider">
                 <h2>
                     <small>By

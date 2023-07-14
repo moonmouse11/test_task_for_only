@@ -4,12 +4,12 @@ include $_SERVER['DOCUMENT_ROOT'] . "/src/core.php";
 
 includeTemplate("header.php", ['text' => "Авторизация", 'miniText' => "Email и пароль"]);
 
-if (! empty($_POST)) {
+if (!empty($_POST)) {
     $user = $_POST['email'];
     $password = $_POST['password'];
     $userNotExist = is_null(checkUser($user));
     $rightPassword = checkPassword($user, $password);
-    if(! $userNotExist && $rightPassword) {
+    if(!$userNotExist && $rightPassword) {
         $succes = true;
         session_start();
         $_SESSION['id'] = checkUser($user)['id'];
@@ -39,8 +39,8 @@ if (! empty($_POST)) {
                         <input type="email" name="email" class="form-control" value="<?= $name = $_POST['email'] ?? "" ?>">
                     </div>
                 </div>
-                <?php if(! empty($_POST)) {
-                    if(! $rightPassword) {
+                <?php if(!empty($_POST)) {
+                    if(!$rightPassword) {
                         includeTemplate("/message/errorMessage.php", ['message' => "Неверный пароль"]);
                     }
                 } ?>
